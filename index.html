@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Renault</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+	<div class="loader">
+		<p>Loading... Please wait</p>
+		<div class="progress"></div>
+	</div>
+
+	<nav class="nav--bar">
+		<img id="logo" src="/assets/Renault_2021_Logo.svg" alt="">
+		<button class="button--navbar">BUY NOW</button>
+	</nav>
+
+	<div class="container">
+		<section class="section first">
+			<div class="section--one--container">
+				<h1>Master of Roads</h1>
+				<p>Elected best car of 2022, the new CLIO, real master of roads</p>
+				<button class="button--hero">KNOW MORE</button>
+			</div>
+		</section>
+
+		<section class="section second">
+			<div class="section--two--container">
+				<h2>Ecologic bonus available</h2>
+				<p>New ecological bonus for SP 98 only ! </p>
+			</div>
+			<div class="custom--bg"></div>
+		</section>
+
+		<section class="section third">
+			<div class="section--third--container">
+				<h2>Configure your model</h2>
+				<p>Try to configure your car today and get an invoice from your closest car dealer !</p>
+				<button class="button--customize">CUSTOMIZE</button>
+			</div>
+		</section>
+
+		<footer>
+			<button class="button--footer">BACK TO TOP</button>
+		</footer>
+	</div>
+	<button class="button--customize button--exit">EXIT</button>
+
+	<div id="webgi-canvas-container">
+		<canvas id="webgi-canvas"></canvas>
+		<button class="button--customize button--exit">EXIT</button>
+	</div>
+
+	<div class="customizer--container">
+		<ul class="strap--colors">
+			<h4>Couleur :</h4>
+			<li class="button--colors carColor yellow"></li>
+			<li class="button--colors carColor red"></li>
+			<li class="button--colors carColor black"></li>
+			<li class="button--colors carColor green"></li>
+			<li class="button--colors carColor blue"></li>
+		</ul>
+		<br>
+		<ul class="strap--colors">
+			<h4>Jantes :</h4>
+			<li class="button--colors jante yellow"></li>
+			<li class="button--colors jante red"></li>
+			<li class="button--colors jante black"></li>
+		</ul>
+		<br>
+		<ul class="strap--colors">
+			<h4>Etriers :</h4>
+			<li class="button--colors etrier yellow"></li>
+			<li class="button--colors etrier red"></li>
+			<li class="button--colors etrier black"></li>
+		</ul>
+		<br>
+		<ul class="strap--colors">
+			<h4>Vitres :</h4>
+			<li class="button--colors vitres white"></li>
+			<li class="button--colors vitres grey"></li>
+			<li class="button--colors vitres black"></li>
+		</ul>
+	</div>
+
+	<script src="src/index.ts" type="module"></script>
+</body>
+</html>
