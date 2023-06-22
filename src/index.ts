@@ -250,6 +250,10 @@ async function setupViewer(){
 	})
 
     // change car color
+    document.querySelector('.button--colors.carColor.white')?.addEventListener('click', () => {
+		changeCarColor(new Color(0xffffff).convertSRGBToLinear())
+    })
+
     document.querySelector('.button--colors.carColor.black')?.addEventListener('click', () => {
 		changeCarColor(new Color(0x000000).convertSRGBToLinear())
     })
@@ -282,12 +286,12 @@ async function setupViewer(){
         changeJante(new Color(0x000000).convertSRGBToLinear())
     })
         
-    document.querySelector('.button--colors.jante.red')?.addEventListener('click', () => {
-        changeJante(new Color(0xFF0000).convertSRGBToLinear())
+    document.querySelector('.button--colors.jante.white')?.addEventListener('click', () => {
+        changeJante(new Color(0xffffff).convertSRGBToLinear())
     })
         
     document.querySelector('.button--colors.jante.yellow')?.addEventListener('click', () => {
-        changeJante(new Color(0xECEC2A).convertSRGBToLinear())
+        changeJante(new Color(0xdfb517).convertSRGBToLinear())
     })
     
     function changeJante(_colorToBeChanged: Color){
@@ -310,6 +314,10 @@ async function setupViewer(){
     
     document.querySelector('.button--colors.etrier.yellow')?.addEventListener('click', () => {
         changeEtrier(new Color(0xECEC2A).convertSRGBToLinear())
+    })
+
+    document.querySelector('.button--colors.etrier.white')?.addEventListener('click', () => {
+        changeEtrier(new Color(0xffffff).convertSRGBToLinear())
     })
 
     function changeEtrier(_colorToBeChanged: Color){
