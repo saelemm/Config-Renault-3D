@@ -104,21 +104,10 @@ async function setupViewer(){
 
     viewer.scene.activeCamera.setCameraOptions({controlsEnabled: false})
 
-    if (isMobile){
-        position.set(-3.5, -1.1, 5.5)
-        target.set(-0.8, 1.55, -0.7)
-        camera.setCameraOptions({ fov: 100 })
-    } else {
-        // position.set(-1.53, 5.7, 0.16)
-        // target.set(-1.53, -0.00, -0.16)
-        // camera.setCameraOptions({ fov: 33.22 })
-
-        position.set(-4.01, -0.21, -0.75)
-        target.set(0.34, -0.05, -1.09)
-        camera.setCameraOptions({ fov: 25.22 })
-        
-
-    }
+    // initial position
+    position.set(-4.01, -0.21, -0.75)
+    target.set(0.34, -0.05, -1.09)
+    camera.setCameraOptions({ fov: 25.22 })
 
     window.scrollTo(0,0)
 
