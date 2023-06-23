@@ -53,17 +53,17 @@ async function setupViewer(){
 
     const isMobile = mobileAndTabletCheck()
 
-    // Add some plugins
-    const manager = await viewer.addPlugin(AssetManagerPlugin)
+
+    // camera assets
     const camera = viewer.scene.activeCamera
-    // get orbit controls
     const position = camera.position
     const target = camera.target
     const exitButton = document.querySelector('.button--exit') as HTMLElement
     const customizerInterface = document.querySelector('.customizer--container') as HTMLElement
 
 
-    // Add a popup(in HTML) with download progress when any asset is downloading.
+    // Add some plugins
+    const manager = await viewer.addPlugin(AssetManagerPlugin)
     await viewer.addPlugin(GBufferPlugin)
     await viewer.addPlugin(new ProgressivePlugin(32))
     await viewer.addPlugin(new TonemapPlugin(true))
@@ -180,7 +180,7 @@ async function setupViewer(){
 
     function onUpdate() {
         needsUpdate = true;
-        // viewer.renderer.resetShadows()
+        viewer.renderer.resetShadows()
         viewer.setDirty()
     }
 
@@ -212,7 +212,6 @@ async function setupViewer(){
             mainContainer.style.pointerEvents = "all"
             document.body.style.cursor = "grab"
             lenis.stop()
-    
             gsap.to(position, {x: 4.25, y: 2.17, z: 0.02, duration: 2, ease: "power3.inOut", onUpdate})
             gsap.to(target, {x: -0.53, y: -0.25 , z: 0.07, duration: 2, ease: "power3.inOut", onUpdate, onComplete: enableControlers})
         })
